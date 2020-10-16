@@ -1,0 +1,8 @@
+prefix=/home/robond/workspace/RoboProj3/install
+
+Name: ball_chaser
+Description: Description of ball_chaser
+Version: 0.0.0
+Cflags: -I/home/robond/workspace/RoboProj3/install/include
+Libs: -L/home/robond/workspace/RoboProj3/install/lib 
+Requires: 
