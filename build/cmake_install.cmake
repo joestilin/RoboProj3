@@ -119,6 +119,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/robond/workspace/RoboProj3/build/gtest/cmake_install.cmake")
   include("/home/robond/workspace/RoboProj3/build/Project3/my_robot/cmake_install.cmake")
   include("/home/robond/workspace/RoboProj3/build/Project3/ball_chaser/cmake_install.cmake")
+  include("/home/robond/workspace/RoboProj3/build/pgm_map_creator/cmake_install.cmake")
 
 endif()
 
