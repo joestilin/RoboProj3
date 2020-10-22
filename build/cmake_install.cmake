@@ -117,8 +117,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/robond/workspace/RoboProj3/build/gtest/cmake_install.cmake")
-  include("/home/robond/workspace/RoboProj3/build/Project3/my_robot/cmake_install.cmake")
-  include("/home/robond/workspace/RoboProj3/build/Project3/ball_chaser/cmake_install.cmake")
+  include("/home/robond/workspace/RoboProj3/build/my_robot/cmake_install.cmake")
+  include("/home/robond/workspace/RoboProj3/build/teleop_twist_keyboard/cmake_install.cmake")
+  include("/home/robond/workspace/RoboProj3/build/ball_chaser/cmake_install.cmake")
   include("/home/robond/workspace/RoboProj3/build/pgm_map_creator/cmake_install.cmake")
 
 endif()

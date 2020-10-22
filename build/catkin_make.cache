@@ -1,2 +1,2 @@
-Project3/ball_chaser:Project3/my_robot:pgm_map_creator
+ball_chaser:my_robot:pgm_map_creator:teleop_twist_keyboard
 -DCATKIN_DEVEL_PREFIX=/home/robond/workspace/RoboProj3/devel -DCMAKE_INSTALL_PREFIX=/home/robond/workspace/RoboProj3/install -G Unix Makefiles

@@ -67,7 +67,7 @@ set(ball_chaser_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(ball_chaser_SOURCE_PREFIX /home/robond/workspace/RoboProj3/src/Project3/ball_chaser)
+  set(ball_chaser_SOURCE_PREFIX /home/robond/workspace/RoboProj3/src/ball_chaser)
   set(ball_chaser_DEVEL_PREFIX /home/robond/workspace/RoboProj3/devel)
   set(ball_chaser_INSTALL_PREFIX "")
   set(ball_chaser_PREFIX ${ball_chaser_DEVEL_PREFIX})
@@ -103,7 +103,7 @@ if(NOT "/home/robond/workspace/RoboProj3/devel/include " STREQUAL " ")
         message(FATAL_ERROR "Project 'ball_chaser' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'robond <robond@todo.todo>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'ball_chaser' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robond/workspace/RoboProj3/src/Project3/ball_chaser/${idir}'.  Ask the maintainer 'robond <robond@todo.todo>' to fix it.")
+      message(FATAL_ERROR "Project 'ball_chaser' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robond/workspace/RoboProj3/src/ball_chaser/${idir}'.  Ask the maintainer 'robond <robond@todo.todo>' to fix it.")
     endif()
     _list_append_unique(ball_chaser_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robond/workspace/RoboProj3/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/robond/workspace/RoboProj3/devel/lib;/home/robond/workspace/RoboProj3/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
