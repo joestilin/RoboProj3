@@ -7,6 +7,15 @@
 
   <node name="amcl" pkg="amcl" type="amcl" output="screen">
      <remap from="scan" to="/scan" />
+
+     <param name="update_min_d" value="0.02" />
+     <param name="update_min_a" value="0.1309" />
+     <param name="resample_interval" value="1" />
+     <!-- <param name="recovery_alpha_slow" value="0.001" /> -->
+     <!-- <param name="recovery_alpha_fast" value="0.1" /> -->
+     <param name="laser_max_range" value="5" />
+     <param name="laser_max_beams" value="60" />
+
      <param name="odom_frame_id" value="odom"/>
      <param name="odom_model_type" value="diff-corrected"/>
      <param name="base_frame_id" value="robot_footprint"/>
@@ -19,7 +28,7 @@
   <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
      <remap from="scan" to="/scan" />
      <param name="base_global_planner" value="navfn/NavfnROS"/>
-     <param name="base_local_planner" value="TrajectoryPlannerROS"/>
+     <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
      <rosparam file="$(find my_robot)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
      <rosparam file="$(find my_robot)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
      <rosparam file="$(find my_robot)/config/local_costmap_params.yaml" command="load" />
