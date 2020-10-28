@@ -4,6 +4,7 @@ TrajectoryPlannerROS:
   max_vel_x: 1.0 #0.5
   min_vel_x: -0.1 #0.01
   max_vel_theta: 1.57 #1.5
+  escape_vel: -1.0
 
   min_in_place_vel_theta: 0.314
 
@@ -18,6 +19,6 @@ TrajectoryPlannerROS:
 
   pdist_scale: 0.1 #0.6
   gdist_scale: 1 #0.8
-  occdist_scale: 0.1
+  occdist_scale: 2.0
 
   holonomic_robot: false
